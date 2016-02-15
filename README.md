@@ -29,5 +29,7 @@ java -jar SpringHibernateTest-0.0.1-SNAPSHOT.jar
 --spring.datasource.username=[postgres user]
 
 --spring.datasource.password=[postgres user password]
+
+Доступ к приложению http://localhost:8080
  
  
