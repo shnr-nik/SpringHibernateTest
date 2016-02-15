@@ -1,0 +1,17 @@
+table {
+    border: 1px solid lightgrey;
+}
+form {
+    position: relative;
+    margin: 5px;
+    padding-right: 0;
+}
+.upload{
+    float: right;
+}
+
+.alert {
+    clear: right;
+}
+
+

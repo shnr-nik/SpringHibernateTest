@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Test Application fo dnevnik.ru</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+    <link th:href="@{/css/jumbotron-narrow.css}" rel="stylesheet" media="screen"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+    <div class="container" >
+        <div class="upload"/>
+            <form method="POST" class="form form-inline" enctype="multipart/form-data" action="/upload">
+                <input type="file" class="filestyle" name="file" accept=".xlsx, .xls"/>
+                <input type="submit" class="btn btn-success" value="Upload" />
+            </form>
+        </div>
+        <div th:if="${message}" class="alert alert-danger" role="alert">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span th:text="${message}"></span>
+        </div>
+        <div>
+            <h1>Products</h1>
+            <table class=" table table-striped">
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                </tr>
+                <tr th:each="pr : ${products}">
+                    <td th:text="${pr.code}"></td>
+                    <td th:text="${pr.name}"></td>
+                    <td th:text="${pr.price}"></td>
+                    <td th:text="${pr.date}"></td>
+                </tr>
+            </table>
+        </div>
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap-filestyle.min.js"></script>
+    </div>
+</body>
+</html>
