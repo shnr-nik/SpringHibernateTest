@@ -1,6 +1,7 @@
 package com.shnarevich.util;
 
 import com.shnarevich.model.Product;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 import java.util.IllegalFormatException;
 import java.util.Iterator;
 import java.util.List;
-
+@Slf4j
 public class ExcelParser {
     private static final int CODE  = 0;
     private static final int NAME  = 1;
@@ -48,6 +49,7 @@ public class ExcelParser {
                 product.setPrice(nextRow.getCell(PRICE).getNumericCellValue());
                 product.setDate(nextRow.getCell(DATE).getDateCellValue());
             } catch (Exception e) {
+                log.error(e.toString());
                 throw new Exception("Incorrect data");
             }
             products.add(product);
