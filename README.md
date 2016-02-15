@@ -11,7 +11,6 @@
  
 # Требования к входным данным
  Excel файл должен содержать один лист с четырьмя колонками:
- 
   - Код - целое число
   - Наименование - строка
   - Цена - число с плавающей запятой
@@ -22,5 +21,13 @@
   - Microsoft Excel 97/2000/XP (.xls)
  
  Пример входных данных: ProductTestData.xls
+
+# Запуск
+
+java -jar SpringHibernateTest-0.0.1-SNAPSHOT.jar 
+
+--spring.datasource.username=[postgres user]
+
+--spring.datasource.password=[postgres user password]
  
  
