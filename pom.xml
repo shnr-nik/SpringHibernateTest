@@ -6,7 +6,6 @@
 	<groupId>com.shnarevich</groupId>
 	<artifactId>SpringHibernateTest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
 
 	<name>SpringHibernateTest</name>
 	<description>Demo project for Spring Boot</description>
@@ -69,12 +68,7 @@
 			<version>2.2.9</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
-		<dependency>
+    	<dependency>
 			<groupId>net.sourceforge.nekohtml</groupId>
 			<artifactId>nekohtml</artifactId>
 			<version>1.9.21</version>
